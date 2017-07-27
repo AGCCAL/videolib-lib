@@ -1,0 +1,36 @@
+        <form id="video_form" action="video-update" method="post" accept-charset="UTF-8">
+          <p>
+          Enter the title of the video.
+          </p>
+          <input type="text" name="title" placeholder="" style="width:50em;" value="{{title}}"/>
+  
+          <p>
+          Enter the YouTube "embed" URL of the video.
+          </p>
+          <input type="text" name="url" placeholder="https://www.youtube.com/embed/dQw4w9WgXcQ" style="width:50em;" value="{{url}}" />
+  
+          <p>
+          Enter the length of the video. This value is only used for display purposes
+          </p>
+          <input type="text" name="vlength" placeholder="2:57" style="width:50em;" value="{{vlength}}" />
+  
+          <p>
+          Enter the description of the video in the box below. It supports Markdown formatting for rich text.
+          </p>
+          <textarea name="description" wrap="hard" placeholder="Enter the description of the video here. This field supports Markdown.">{{description}}</textarea>
+  
+          <p>
+          If you have a transcript of the video, enter it in the box below. If you don't have one now, you can come back and add it later.
+          </p>
+          <textarea name="transcript" wrap="hard" placeholder="Enter the transcript of the video here. This field supports Markdown.">{{transcript}}</textarea>
+  
+          <p>
+          If you have "keywords" which you want to use for searching, but which don't appear elsewhere, put them in this box.
+          </p>
+          <input type="text" name="keywords" placeholder="" style="width:50em;" value="{{keywords}}" />
+  
+          <br/><br/>
+          <button type="submit">Save</button>
+          <br/><br/>
+          <input type="hidden" id="video_id" name="video_id" value="{{video_id}}">
+        </form>

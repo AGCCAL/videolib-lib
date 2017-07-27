@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/videolib.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/alert.css" />
+    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <title>Create a new video</title>
+  </head>
+  <body onload="javascript:on_load();">
+
+    {{{banner}}}
+
+    <div class="centre">
+      <h1>Create a new video</h1>
+      <div id="video-submit">
+        <form id="video_form" action="video-create" method="post" accept-charset="UTF-8">
+          <p>
+          Enter the title of the video.
+          </p>
+          <input type="text" name="title" placeholder="" style="width:50em;"></input>
+  
+          <p>
+          Enter the YouTube "embed" URL of the video.
+          </p>
+          <input type="text" name="url" placeholder="https://www.youtube.com/embed/QH2-TGUlwu4" style="width:50em;"></input>
+  
+          <p>
+          Enter the length of the video. This value is only used for display purposes
+          </p>
+          <input type="text" name="vlength" placeholder="3:36" style="width:50em;"></input>
+  
+          <p>
+          Enter the description of the video in the box below. It supports Markdown formatting for rich text.
+          </p>
+          <textarea name="description" wrap="hard" placeholder="Enter the description of the video here. This field supports Markdown."></textarea>
+  
+          <p>
+          If you have a transcript of the video, enter it in the box below. If you don't have one now, you can come back and add it later.
+          </p>
+          <textarea name="transcript" wrap="hard" placeholder="Enter the transcript of the video here. This field supports Markdown."></textarea>
+  
+          <p>
+          If you have "keywords" which you want to use for searching, but which don't appear elsewhere, put them in this box.
+          </p>
+          <input type="text" name="keywords" placeholder="" style="width:50em;"></input>
+  
+          <br/><br/>
+          <button type="submit">Submit</button>
+          <br/><br/>
+  
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/retina.min.js"></script>
+  </body>
+</html>
+

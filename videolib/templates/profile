@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/videolib.css" />
+    <link rel="stylesheet" href="css/alert.css" />
+{{#show_create}}
+    <link rel="stylesheet" href="css/admin.css" />
+    <script type="text/javascript" src="js/admin.js"></script>
+{{/show_create}}
+    <script type="text/javascript" src="js/alert.js"></script>
+    <title>{{&name}}</title>
+  </head>
+  <body>
+
+{{{banner}}}
+
+    <div class="centre">
+      <div class="profile">
+
+{{#show_create}}
+        <h1>Create a new video</h1>
+        Click the button to create a new video: <button type="button" onclick="javascript:document.location='./video-create';">Create video</button>
+        <br/><br/>
+
+
+        <div class="profile-introduction">
+          <h1>Existing videos</h1>
+          <p>
+            The list below shows the videos already in the database. You can modify them as you like, but bear in mind the data goes live as soon as you save it.
+          </p>
+          <table border="0" width = "100%">
+            <tr><th>Title</th></tr>
+{{#videos}}
+            <tr><td><a href="./video-modify?video_id={{video_id}}">{{{title}}}</a></td></tr>
+{{/videos}}
+          </table>
+        </div>
+{{/show_create}}
+
+      </div>
+      <br/><br/>
+    </div>
+
+
+    <div id="alert-mask" class="alert-mask"></div>
+
+    <div id="alert-alert" class="alert-alert">
+      <div id="status">
+      </div>
+      <button type="button" class="alert-button" onclick="javascript:hide_alert();">OK</button>
+    </div>
+
+    <script type="text/javascript" src="js/retina.min.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+
+  </body>
+</html>
+

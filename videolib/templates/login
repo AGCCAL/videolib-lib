@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/videolib.css" />
+<link rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" href="css/alert.css" />
+<title>{{&name}}</title>
+</head>
+<body>
+
+<div class="banner">
+<img src="img/logo.png" class="logo" />
+</div>
+
+
+<div class="centre">
+
+
+<div class="login-login" id="login-login">
+<form id="login-form" action="do_login" method="post">
+<input type="hidden" name="redirect" id="redirect" value="{{redirect}}" />
+
+<table width="100%" cols="6">
+<tr>
+<td width="16.67%" />
+<td width="16.67%" class="heading">
+<h1>Login</h1>
+</td>
+<td width="16.67%" />
+<td width="16.67%" />
+<td width="16.67%" />
+<td width="16.67%" />
+</tr>
+<tr>
+<td />
+<td class="prompt">
+Email or username
+</td>
+<td colspan="2" class="input">
+<input type="text" name="username" id="username" value="" placeholder="Username or email" />
+</td>
+</tr>
+<tr>
+<td />
+<td class="prompt">
+Password
+</td>
+<td colspan="2" class="input">
+<input type="password" name="password" id="password" value="" placeholder="Password" />
+</td>
+<td class="remember"><div  style="margin-left: 15px;"><span id="forgot" onclick="javascript:forgot_password();">Forgot it?</span></div></td>
+</tr>
+<tr>
+<td />
+<td />
+<td class="remember" colspan="3">
+<input type="checkbox" name="remember" id="remember" />
+<label for="remember">Remember me</label>
+</td>
+</tr>
+<tr>
+<td />
+<td />
+<td class="remember" colspan="3">
+<button type="submit" class="login-submit">LOGIN</button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+<div id="alert-mask" class="alert-mask"></div>
+
+<div id="alert-alert" class="alert-alert">
+<div id="status">
+</div>
+<button type="button" class="alert-button" onclick="javascript:hide_alert();">OK</button>
+</div>
+
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/alert.js"></script>
+<script type="text/javascript" src="js/retina.min.js"></script>
+</body>
+</html>
+
